@@ -34,7 +34,7 @@ body {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  max-width: 35rem;
+  max-width: 30rem;
 }
 
 .image {
@@ -121,6 +121,7 @@ body {
   .card {
     flex-direction: row;
     gap: 0;
+    min-width: 35rem;
     max-width: 35%;
     margin: 0 auto;
   }
