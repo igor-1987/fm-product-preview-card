@@ -15,7 +15,124 @@
   --text-preset-3: 500 0.875rem/1.6 "Montserrat", sans-serif;
   --text-preset-4: 500 0.75rem/1.2 "Montserrat", sans-serif;
   --text-preset-5: 500 0.81rem/1.2 "Montserrat", sans-serif;
+  /* spacing */
+  --space-500: 2.5rem;
+  --space-400: 2rem;
+  --space-300: 1.5rem;
+  --space-200: 1rem;
+  --space-100: 0.5rem;
+  --space-50: 0.25rem;
   /* other units */
   --border-radius: 0.5rem;
   --letter-spacing: 5px;
+  --transition: all 0.3s linear;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-cream);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  width: clamp(21.875rem, 25vw, 37.5rem);
+  background-color: var(--clr-white);
+  /* border: 1px solid #000; */
+}
+
+.img-container,
+.text-container {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  display: block;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.text-container {
+  padding: var(--space-400);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.product,
+.price,
+.action {
+  flex: 1;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-300);
+}
+
+.label,
+.title,
+.text {
+  flex: 1;
+}
+
+.label {
+  font: var(--text-preset-4);
+  letter-spacing: var(--letter-spacing);
+  color: var(--clr-grey);
+}
+
+.title {
+  color: var(--clr-black);
+  font: var(--text-preset-1);
+}
+
+.text {
+  color: var(--clr-grey);
+  font: var(--text-preset-3);
+}
+
+.price-main {
+  color: var(--clr-green-500);
+  font: var(--text-preset-1);
+  display: flex;
+  align-items: center;
+  gap: var(--space-200);
+}
+
+.price-secondary {
+  font: var(--text-preset-5);
+  text-decoration: line-through;
+  color: var(--clr-grey);
+}
+
+.btn {
+  background-color: var(--clr-green-500);
+  color: var(--clr-white);
+  padding: var(--space-200) var(--space-400);
+  display: block;
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: transparent;
+  font: var(--text-preset-2);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--clr-green-700);
 }
