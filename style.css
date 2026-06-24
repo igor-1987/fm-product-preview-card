@@ -26,6 +26,7 @@
   --border-radius: 0.5rem;
   --letter-spacing: 5px;
   --transition: all 0.3s linear;
+  --box-shadow: 0.25rem 0.25rem 0.5rem hsla(0, 0%, 0%, 0.1);
 }
 
 *,
@@ -48,9 +49,9 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius);
-  width: clamp(21.875rem, 25vw, 37.5rem);
+  width: clamp(21.875rem, 90vw, 37.5rem);
   background-color: var(--clr-white);
-  /* border: 1px solid #000; */
+  box-shadow: var(--box-shadow);
 }
 
 .img-container,
@@ -135,4 +136,18 @@ body {
 
 .btn:hover {
   background-color: var(--clr-green-700);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .main-image {
+    content: url("./images/image-product-desktop.jpg");
+    height: 100%;
+    width: 18.75rem;
+    border-bottom-left-radius: var(--border-radius);
+    border-top-right-radius: 0;
+  }
 }
